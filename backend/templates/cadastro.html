@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cadastro</title>
+  <style>
+    body {
+      background: #f1f1f1;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      background: #fff;
+      max-width: 400px;
+      margin: 80px auto;
+      padding: 30px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    button {
+      padding: 10px 20px;
+      width: 100%;
+      background: #5cb85c;
+      color: white;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Cadastro</h2>
+    <form method="POST">
+      <input type="text" name="nome" placeholder="Nome completo" required />
+      <input type="email" name="email" placeholder="Seu e-mail" required />
+      <input type="password" name="senha" placeholder="Sua senha" required />
+      <button type="submit">Cadastrar</button>
+    </form>
+    {% if erro %}
+      <p style="color:red;">{{ erro }}</p>
+    {% endif %}
+  </div>
+</body>
+</html>

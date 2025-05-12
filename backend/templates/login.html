@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <style>
+    body {
+      background: #f1f1f1;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      background: #fff;
+      max-width: 400px;
+      margin: 80px auto;
+      padding: 30px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    button {
+      padding: 10px 20px;
+      width: 100%;
+      background: #269abc;
+      color: white;
+      border: none;
+    }
+    .link {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <form method="POST">
+      <input type="email" name="email" placeholder="Seu e-mail" required />
+      <input type="password" name="senha" placeholder="Sua senha" required />
+      <div>
+        <input type="checkbox" /> Manter-me logado
+      </div>
+      <button type="submit">Logar</button>
+    </form>
+    {% if erro %}
+      <p style="color:red;">{{ erro }}</p>
+    {% endif %}
+    <div class="link">
+      Ainda não tem conta? <a href="{{ url_for('cadastro') }}">Cadastre-se</a>
+    </div>
+  </div>
+</body>
+</html>

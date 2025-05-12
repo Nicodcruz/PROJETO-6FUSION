@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #e0f4f5;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 20px 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.logo img {
+  height: 80px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.btn-login {
+  background-color: #007c91;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #005f6b;
+}
+
+.btn-login:focus {
+  outline: 2px solid #00a4c6;
+  outline-offset: 3px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 40px;
+  background-color: #fdfdfd;
+  margin-top: 20px;
+}
+
+.conteudo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.texto {
+  flex: 1;
+}
+
+.texto h1 {
+  font-size: 2.5em;
+  color: #007c91;
+  margin-bottom: 20px;
+}
+
+.texto p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.texto button {
+  padding: 10px 25px;
+  background-color: #00a4c6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.texto button:hover {
+  background-color: #007c91;
+}
+
+.texto button:focus {
+  outline: 2px solid #007c91;
+  outline-offset: 3px;
+}
+
+.imagem img {
+  max-width: 100%;
+  max-height: 500px;
+  height: auto;
+}
+
+.servicos {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.servicos h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.servicos .descricao {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.servicos .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.servicos .item img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.servicos .item h3 {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #007c91;
+}
+
+/* Responsivo: Tablet e celular */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: white;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    padding: 20px;
+    box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .btn-login {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .imagem {
+    display: none;
+  }
+
+  .conteudo {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 20px;
+  }
+}
+
+/* Responsivo: Celular pequeno */
+@media (max-width: 480px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  .texto h1 {
+    font-size: 1.5em;
+  }
+
+  .texto p {
+    font-size: 0.95em;
+  }
+
+  .texto button,
+  .btn-login {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .logo img {
+    height: 60px;
+  }
+}

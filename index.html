@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Empresa de Soluções Digitais</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo da Empresa" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Sobre Nós</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Contato</a></li>
+        <a href="http://127.0.0.1:5000" class="btn-login" onclick="entrar()">Entrar</a>
+      </ul>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  </header>
+
+  <main>
+    <section class="conteudo">
+      <div class="texto">
+        <h1>Soluções Digitais para o Seu Negócio</h1>
+        <p>Oferecemos criação de sites, segurança digital e outros serviços personalizados para empresas.</p>
+        <button onclick="saibaMais()">Saiba Mais</button>
+      </div>
+      <div class="imagem">
+        <img src="imagem-exemplo.png" alt="Pessoa usando computador" />
+      </div>
+    </section>
+
+    <section class="servicos">
+      <div class="container">
+        <h2>Serviços inclusos para nossos parceiros</h2>
+        <p class="descricao">
+          Os fundamentos principais da nossa empresa são baseados em:
+        </p>
+        <div class="servicos-grid">
+          <div class="item">
+            <img src="icons/suporte.png" alt="Suporte especializado">
+            <h3>Suporte e atendimento especializado</h3>
+          </div>
+          <div class="item">
+            <img src="icons/conexao.png" alt="Conexão estável">
+            <h3>Criação de Sites e Aplicativos</h3>
+          </div>
+          <div class="item">
+            <img src="icons/velocidade.png" alt="Velocidade">
+            <h3>Segurança e proteção de dados</h3>
+          </div>
+          <div class="item">
+            <img src="icons/wifi.png" alt="Wi-Fi grátis">
+            <h3>Manutenção e correção de Bugs</h3>
+          </div>
+          <div class="item">
+            <img src="icons/app.png" alt="Aplicativos">
+            <h3>Treinamento especializado</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
