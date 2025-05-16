@@ -9,6 +9,10 @@ app = Flask(__name__)
 def home():
     return redirect(url_for("login"))
 
+@app.route("/logout")
+def logout():
+    return redirect(url_for("login"))
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -17,7 +21,8 @@ def login():
 
         usuario = usuarios_collection.find_one({"email": email})
         if usuario and check_password_hash(usuario["senha"], senha):
-            return f"Bem-vindo, {usuario['nome']}!"
+            return render_template("bem_vindo.html", nome=usuario["nome"])
+
         else:
             return render_template("login.html", erro="Email ou senha incorretos.")
 
