@@ -1,234 +1,440 @@
+/* Estilos globais */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #e0f4f5;
-  color: #333;
+    font-family: 'Poppins', sans-serif;
+    background-color: #e0f4f5;
+    color: #333;
 }
 
+/* Header */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  padding: 20px 40px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
 }
 
 .logo img {
-  height: 80px;
+    height: 80px;
 }
 
 nav ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
+    list-style: none;
+    display: flex;
+    gap: 25px;
 }
 
 nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Transição suave para hover */
+}
+
+nav a:hover {
+    color: #007c91; /* Cor ao passar o mouse */
 }
 
 .btn-login {
-  background-color: #007c91;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    background-color: #007c91;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Garante que não tenha sublinhado */
+    display: inline-block; /* Para padding e width funcionarem corretamente */
 }
 
 .btn-login:hover {
-  background-color: #005f6b;
+    background-color: #005f6b;
 }
 
 .btn-login:focus {
-  outline: 2px solid #00a4c6;
-  outline-offset: 3px;
+    outline: 2px solid #00a4c6;
+    outline-offset: 3px;
 }
 
+/* Main Content Section (Conteudo) */
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 60px 40px;
-  background-color: #fdfdfd;
-  margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px 40px;
+    background-color: #fdfdfd;
+    margin-top: 20px; /* Espaço entre o header e o main */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sutil sombra para o main */
 }
 
 .conteudo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-  width: 100%;
-  max-width: 1200px;
-  flex-wrap: wrap;
-  gap: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    width: 100%;
+    max-width: 1200px; /* Limita a largura máxima do conteúdo */
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+    gap: 40px; /* Espaçamento entre texto e imagem */
 }
 
 .texto {
-  flex: 1;
+    flex: 1; /* Ocupa o espaço disponível */
+    min-width: 300px; /* Garante que o texto não fique muito pequeno */
 }
 
 .texto h1 {
-  font-size: 2.5em;
-  color: #007c91;
-  margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #007c91;
+    margin-bottom: 20px;
+    line-height: 1.2; /* Altura da linha para melhor leitura */
 }
 
 .texto p {
-  font-size: 1.1em;
-  margin-bottom: 30px;
-  color: #555;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #555;
+    line-height: 1.6;
 }
 
 .texto button {
-  padding: 10px 25px;
-  background-color: #00a4c6;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    padding: 12px 28px; /* Ajuste para um botão um pouco maior */
+    background-color: #00a4c6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Adiciona transição para transform */
 }
 
 .texto button:hover {
-  background-color: #007c91;
+    background-color: #007c91;
+    transform: translateY(-2px); /* Pequeno efeito de elevação */
 }
 
 .texto button:focus {
-  outline: 2px solid #007c91;
-  outline-offset: 3px;
+    outline: 2px solid #007c91;
+    outline-offset: 3px;
+}
+
+.imagem {
+    flex-shrink: 0; /* Impede que a imagem encolha demais */
+    margin-left: 20px; /* Espaço à esquerda da imagem */
 }
 
 .imagem img {
-  max-width: 100%;
-  max-height: 500px;
-  height: auto;
+    max-width: 100%;
+    max-height: 500px; /* Limita a altura máxima da imagem */
+    height: auto;
+    display: block; /* Remove espaço extra abaixo da imagem */
 }
 
+/* Seção de Serviços */
 .servicos {
-  padding: 60px 20px;
-  background-color: #f9f9f9;
-  text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    width: 100%; /* Garante que ocupe a largura total */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05); /* Sutil sombra acima da seção */
+}
+
+.servicos .container {
+    max-width: 1200px; /* Limita a largura do conteúdo interno */
+    margin: 0 auto; /* Centraliza o container */
 }
 
 .servicos h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  color: #222;
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #222;
 }
 
 .servicos .descricao {
-  color: #666;
-  font-size: 16px;
-  margin-bottom: 40px;
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 40px;
+    max-width: 700px; /* Limita a largura da descrição */
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* Wrapper do carrossel (desktop padrão: visível) */
+.servicos-carrossel-wrapper {
+    overflow: visible; /* Conteúdo não é cortado */
+    width: 100%;
+    margin: 0 auto; /* Centraliza o wrapper */
+    max-width: 1100px; /* Alinha com o grid desktop */
+    position: relative; /* Para potencial uso de navegação ou indicadores */
+}
+
+/* Grid de serviços (desktop padrão) */
 .servicos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 30px;
-  max-width: 1100px;
-  margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adapta colunas automaticamente */
+    gap: 30px; /* Espaço entre os itens do grid */
+    width: 100%; /* Ocupa 100% do seu wrapper */
+    margin: 0; /* Remove margin auto aqui, pois o wrapper já centraliza */
 }
 
 .servicos .item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white; /* Fundo para os cards */
+    padding: 30px 20px; /* Padding interno dos cards */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra mais suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição para hover */
+    text-align: center;
+}
+
+.servicos .item:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); /* Sombra mais proeminente */
 }
 
 .servicos .item img {
-  width: 80px;
-  height: auto;
-  margin-bottom: 15px;
+    width: 80px; /* Tamanho dos ícones */
+    height: auto;
+    margin-bottom: 20px; /* Espaço abaixo do ícone */
 }
 
 .servicos .item h3 {
-  font-size: 16px;
-  color: #333;
-  font-weight: 500;
+    font-size: 18px; /* Tamanho da fonte do título do item */
+    color: #333;
+    font-weight: 600;
+    line-height: 1.4;
 }
 
+/* Menu Toggle (Mobile) */
 .menu-toggle {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: #007c91;
+    display: none; /* Escondido por padrão */
+    font-size: 28px;
+    cursor: pointer;
+    color: #007c91;
+    position: relative; /* Para alinhamento */
+    z-index: 1100; /* Garante que o ícone do menu fique acima da nav ao abrir */
 }
 
-/* Responsivo: Tablet e celular */
+/* ======================================= */
+/* MEDIA QUERIES PARA RESPONSIVIDADE */
+/* ======================================= */
+
+/* Responsivo: Tablet e celular (aplicado abaixo de 768px) */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
+    header {
+        padding: 15px 20px; /* Menor padding no header */
+    }
 
-  nav ul {
-    display: none;
-    flex-direction: column;
-    align-items: flex-end;
-    background-color: white;
-    position: absolute;
-    top: 80px;
-    right: 20px;
-    padding: 20px;
-    box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    z-index: 1000;
-  }
+    .logo img {
+        height: 70px; /* Ajuste do logo */
+    }
 
-  nav ul.active {
-    display: flex;
-  }
+    /* Menu Hamburger */
+    .menu-toggle {
+        display: block; /* Mostra o ícone do menu hamburger */
+    }
 
-  .btn-login {
-    margin-top: 10px;
-    width: 100%;
-  }
+    nav ul {
+        display: none; /* Esconde a navegação por padrão */
+        flex-direction: column;
+        align-items: flex-end; /* Alinha os itens à direita */
+        background-color: white;
+        position: absolute;
+        top: 85px; /* Posição abaixo do header */
+        right: 20px;
+        padding: 20px;
+        box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
+        border-radius: 8px;
+        z-index: 999; /* Fica abaixo do menu-toggle, mas acima do conteúdo */
+        width: 200px; /* Largura do menu mobile */
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out; /* Transição para abrir/fechar */
+        transform: translateY(-10px); /* Começa ligeiramente acima */
+        opacity: 0; /* Escondido */
+        pointer-events: none; /* Impede cliques quando invisível */
+    }
 
-  .imagem {
-    display: none;
-  }
+    nav ul.active {
+        display: flex; /* Mostra a navegação */
+        transform: translateY(0); /* Posição final */
+        opacity: 1; /* Totalmente visível */
+        pointer-events: auto; /* Permite cliques */
+    }
 
-  .conteudo {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 30px 20px;
-  }
+    nav ul li {
+        margin-bottom: 15px; /* Mais espaço entre os itens do menu */
+        width: 100%;
+        text-align: right;
+    }
+
+    nav ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    nav a {
+        padding: 8px 0; /* Padding para as opções de menu */
+        display: block; /* Ocupa a largura total do li */
+    }
+
+    .btn-login {
+        margin-top: 15px; /* Mais espaço acima do botão de login */
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px; /* Ajuste o padding do botão */
+    }
+
+    /* Seção de Conteúdo */
+    .imagem {
+        display: none; /* Esconde a imagem na versão mobile */
+    }
+
+    .conteudo {
+        flex-direction: column; /* Itens em coluna */
+        align-items: flex-start;
+        padding: 30px 20px;
+    }
+
+    .texto {
+        width: 100%; /* Ocupa toda a largura disponível */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .texto h1 {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+
+    .texto p {
+        font-size: 0.95em;
+        margin-bottom: 25px;
+    }
+
+    .texto button {
+        width: 80%; /* Botão com largura reduzida, centralizado */
+        margin: 0 auto; /* Centraliza o botão */
+        display: block;
+    }
+
+    /* Carrossel de Serviços (ATIVADO AQUI) */
+    .servicos .container {
+        padding: 0; /* Remove padding lateral do container para usar o do wrapper */
+    }
+
+    .servicos-carrossel-wrapper {
+        overflow-x: scroll; /* Permite a rolagem horizontal */
+        scroll-behavior: smooth; /* Rolagem suave (para scroll manual ou JS) */
+        -webkit-overflow-scrolling: touch; /* Melhora a rolagem em iOS */
+        width: 100%;
+        margin: 0; /* Remove margin auto */
+        padding: 0 20px; /* Adiciona padding lateral para os cards não colarem nas bordas */
+        box-sizing: border-box; /* Garante que o padding não adicione largura extra */
+    }
+
+    .servicos-grid {
+        display: flex; /* Muda para flexbox para permitir o scroll horizontal */
+        flex-wrap: nowrap; /* Impede que os itens quebrem linha */
+        gap: 20px; /* Espaçamento entre os cards no carrossel */
+        width: max-content; /* FAZ O CONTAINER TER A LARGURA DE TODOS OS ITENS */
+        /* Removido grid-template-columns e max-width que são para desktop */
+        grid-template-columns: unset;
+        max-width: unset;
+        margin: 0;
+        padding-bottom: 10px; /* Espaço para a barra de rolagem se ela aparecer */
+    }
+
+    .servicos .item {
+        flex: 0 0 auto; /* Impede que os itens encolham ou estiquem */
+        width: 75%; /* Largura de cada item no carrossel. Ajuste se um card só estiver visível demais. */
+        max-width: 280px; /* Limita a largura máxima do item */
+        scroll-snap-align: start; /* Ajuda a "parar" nos itens ao rolar manualmente */
+        background-color: white;
+        padding: 25px 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        text-align: center;
+        /* Remover transform e box-shadow do hover para mobile, se não quiser */
+        transform: none;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: none; /* Desativa a transição de hover para mobile */
+    }
+
+    .servicos .item img {
+        width: 70px;
+        margin-bottom: 10px;
+    }
+
+    .servicos .item h3 {
+        font-size: 15px;
+    }
+
+    /* Opcional: Para esconder a barra de rolagem (mas manter a funcionalidade de scroll) */
+    .servicos-carrossel-wrapper::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+    .servicos-carrossel-wrapper {
+        -ms-overflow-style: none;  /* Internet Explorer e Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
 }
 
-/* Responsivo: Celular pequeno */
+/* Responsivo: Celular pequeno (aplicado abaixo de 480px) */
 @media (max-width: 480px) {
-  header {
-    padding: 15px 20px;
-  }
+    header {
+        padding: 10px 15px;
+    }
 
-  .texto h1 {
-    font-size: 1.5em;
-  }
+    .logo img {
+        height: 55px;
+    }
 
-  .texto p {
-    font-size: 0.95em;
-  }
+    .texto h1 {
+        font-size: 1.6em;
+    }
 
-  .texto button,
-  .btn-login {
-    width: 100%;
-    padding: 12px;
-  }
+    .texto p {
+        font-size: 0.85em;
+    }
 
-  .logo img {
-    height: 60px;
-  }
+    .texto button {
+        width: 90%; /* Botão um pouco mais largo para telas muito pequenas */
+    }
+
+    .servicos h2 {
+        font-size: 22px;
+    }
+
+    .servicos .descricao {
+        font-size: 13px;
+        margin-bottom: 30px;
+    }
+
+    .servicos .item {
+        width: 90%; /* Ajusta a largura do item para celulares muito pequenos */
+        max-width: 250px;
+        padding: 20px 15px; /* Reduz o padding do card */
+    }
+
+    .servicos .item img {
+        width: 60px; /* Reduz o tamanho do ícone */
+        margin-bottom: 8px;
+    }
+
+    .servicos .item h3 {
+        font-size: 14px;
+    }
+
+    /* Ajuste de padding para o wrapper em telas muito pequenas */
+    .servicos-carrossel-wrapper {
+        padding: 0 15px;
+    }
 }
