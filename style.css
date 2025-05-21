@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #e0f4f5;
+    background-image: url(images/showcase/background.png);
     color: #333;
 }
 
@@ -20,7 +20,7 @@ header {
     padding: 20px 40px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
-    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+    z-index: 1000;
 }
 
 .logo img {
@@ -37,11 +37,11 @@ nav a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-    transition: color 0.3s ease; /* Transição suave para hover */
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #007c91; /* Cor ao passar o mouse */
+    color: #007c91;
 }
 
 .btn-login {
@@ -52,8 +52,8 @@ nav a:hover {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    text-decoration: none; /* Garante que não tenha sublinhado */
-    display: inline-block; /* Para padding e width funcionarem corretamente */
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn-login:hover {
@@ -73,8 +73,8 @@ main {
     flex-direction: column;
     padding: 60px 40px;
     background-color: #fdfdfd;
-    margin-top: 20px; /* Espaço entre o header e o main */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sutil sombra para o main */
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .conteudo {
@@ -83,21 +83,21 @@ main {
     align-items: center;
     padding: 50px;
     width: 100%;
-    max-width: 1200px; /* Limita a largura máxima do conteúdo */
-    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
-    gap: 40px; /* Espaçamento entre texto e imagem */
+    max-width: 1200px;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
 .texto {
-    flex: 1; /* Ocupa o espaço disponível */
-    min-width: 300px; /* Garante que o texto não fique muito pequeno */
+    flex: 1;
+    min-width: 300px;
 }
 
 .texto h1 {
     font-size: 2.5em;
     color: #007c91;
     margin-bottom: 20px;
-    line-height: 1.2; /* Altura da linha para melhor leitura */
+    line-height: 1.2;
 }
 
 .texto p {
@@ -108,18 +108,18 @@ main {
 }
 
 .texto button {
-    padding: 12px 28px; /* Ajuste para um botão um pouco maior */
+    padding: 12px 28px;
     background-color: #00a4c6;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Adiciona transição para transform */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .texto button:hover {
     background-color: #007c91;
-    transform: translateY(-2px); /* Pequeno efeito de elevação */
+    transform: translateY(-2px);
 }
 
 .texto button:focus {
@@ -128,29 +128,29 @@ main {
 }
 
 .imagem {
-    flex-shrink: 0; /* Impede que a imagem encolha demais */
-    margin-left: 20px; /* Espaço à esquerda da imagem */
+    flex-shrink: 0;
+    margin-left: 20px;
 }
 
 .imagem img {
     max-width: 100%;
-    max-height: 500px; /* Limita a altura máxima da imagem */
+    max-height: 500px;
     height: auto;
-    display: block; /* Remove espaço extra abaixo da imagem */
+    display: block;
 }
 
 /* Seção de Serviços */
 .servicos {
     padding: 60px 20px;
-    background-color: #f9f9f9;
+    background-color: #D9F2F4;
     text-align: center;
-    width: 100%; /* Garante que ocupe a largura total */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05); /* Sutil sombra acima da seção */
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .servicos .container {
-    max-width: 1200px; /* Limita a largura do conteúdo interno */
-    margin: 0 auto; /* Centraliza o container */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .servicos h2 {
@@ -163,54 +163,54 @@ main {
     color: #666;
     font-size: 16px;
     margin-bottom: 40px;
-    max-width: 700px; /* Limita a largura da descrição */
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
 
 /* Wrapper do carrossel (desktop padrão: visível) */
 .servicos-carrossel-wrapper {
-    overflow: visible; /* Conteúdo não é cortado */
+    overflow: visible;
     width: 100%;
-    margin: 0 auto; /* Centraliza o wrapper */
-    max-width: 1100px; /* Alinha com o grid desktop */
-    position: relative; /* Para potencial uso de navegação ou indicadores */
+    margin: 0 auto;
+    max-width: 1100px;
+    position: relative;
 }
 
 /* Grid de serviços (desktop padrão) */
 .servicos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adapta colunas automaticamente */
-    gap: 30px; /* Espaço entre os itens do grid */
-    width: 100%; /* Ocupa 100% do seu wrapper */
-    margin: 0; /* Remove margin auto aqui, pois o wrapper já centraliza */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    width: 100%;
+    margin: 0;
 }
 
 .servicos .item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white; /* Fundo para os cards */
-    padding: 30px 20px; /* Padding interno dos cards */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra mais suave */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição para hover */
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
 }
 
 .servicos .item:hover {
-    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); /* Sombra mais proeminente */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
 .servicos .item img {
-    width: 80px; /* Tamanho dos ícones */
+    width: 80px;
     height: auto;
-    margin-bottom: 20px; /* Espaço abaixo do ícone */
+    margin-bottom: 20px;
 }
 
 .servicos .item h3 {
-    font-size: 18px; /* Tamanho da fonte do título do item */
+    font-size: 18px;
     color: #333;
     font-weight: 600;
     line-height: 1.4;
@@ -218,12 +218,137 @@ main {
 
 /* Menu Toggle (Mobile) */
 .menu-toggle {
-    display: none; /* Escondido por padrão */
+    display: none;
     font-size: 28px;
     cursor: pointer;
     color: #007c91;
-    position: relative; /* Para alinhamento */
-    z-index: 1100; /* Garante que o ícone do menu fique acima da nav ao abrir */
+    position: relative;
+    z-index: 1100;
+}
+
+/* NOVA SEÇÃO: Vitrine de Criação de Sites (site-creation-showcase) */
+.site-creation-showcase {
+    padding: 10px 40px;
+    background-image: url(images/showcase/background.png); /* Fundo mais claro para destaque */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+    border-radius: 8px; /* Cantos levemente arredondados */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.site-creation-showcase .container {
+    max-width: 1000px; /* Container um pouco menor para centralizar melhor o conteúdo */
+    margin: 0 auto;
+}
+
+.site-creation-showcase h2 {
+    font-size: 2.8em; /* Título maior */
+    color: #222;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.site-creation-showcase .sub-heading {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.site-types-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Espaçamento menor entre os botões */
+    margin-bottom: 40px;
+}
+
+.type-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px; /* Largura dos botões */
+    height: 100px; /* Altura dos botões */
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85em;
+    color: #555;
+    font-weight: 500;
+}
+
+.type-button:hover {
+    border-color: #00a4c6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.type-button.active {
+    background-color: #e0f4f5;
+    border-color: #00a4c6;
+    color: #007c91;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.type-button img {
+    width: 35px; /* Tamanho dos ícones */
+    height: 35px;
+    margin-bottom: 8px;
+}
+
+.type-button span {
+    display: block;
+    line-height: 1.2;
+}
+
+.cta-button {
+    padding: 15px 40px;
+    background-color: #00a4c6;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    margin-bottom: 50px; /* Espaço antes da imagem */
+}
+
+.cta-button:hover {
+    background-color: #007c91;
+    transform: translateY(-2px);
+}
+
+.cta-button:focus {
+    outline: 2px solid #007c91;
+    outline-offset: 3px;
+}
+
+.showcase-image-wrapper {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Garante que a imagem não saia da borda */
+    max-width: 900px; /* Controla o tamanho máximo da imagem */
+    margin: 0 auto; /* Centraliza */
+    border: 1px solid #f0f0f0;
+}
+
+.showcase-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px; /* A imagem também terá cantos arredondados */
+    transition: opacity 0.5s ease; /* Transição suave ao mudar a imagem */
 }
 
 /* ======================================= */
@@ -233,46 +358,46 @@ main {
 /* Responsivo: Tablet e celular (aplicado abaixo de 768px) */
 @media (max-width: 768px) {
     header {
-        padding: 15px 20px; /* Menor padding no header */
+        padding: 15px 20px;
     }
 
     .logo img {
-        height: 70px; /* Ajuste do logo */
+        height: 70px;
     }
 
     /* Menu Hamburger */
     .menu-toggle {
-        display: block; /* Mostra o ícone do menu hamburger */
+        display: block;
     }
 
     nav ul {
-        display: none; /* Esconde a navegação por padrão */
+        display: none;
         flex-direction: column;
-        align-items: flex-end; /* Alinha os itens à direita */
+        align-items: flex-end;
         background-color: white;
         position: absolute;
-        top: 85px; /* Posição abaixo do header */
+        top: 85px;
         right: 20px;
         padding: 20px;
-        box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
+        box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.15);
         border-radius: 8px;
-        z-index: 999; /* Fica abaixo do menu-toggle, mas acima do conteúdo */
-        width: 200px; /* Largura do menu mobile */
-        transition: transform 0.3s ease-out, opacity 0.3s ease-out; /* Transição para abrir/fechar */
-        transform: translateY(-10px); /* Começa ligeiramente acima */
-        opacity: 0; /* Escondido */
-        pointer-events: none; /* Impede cliques quando invisível */
+        z-index: 999;
+        width: 200px;
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        transform: translateY(-10px);
+        opacity: 0;
+        pointer-events: none;
     }
 
     nav ul.active {
-        display: flex; /* Mostra a navegação */
-        transform: translateY(0); /* Posição final */
-        opacity: 1; /* Totalmente visível */
-        pointer-events: auto; /* Permite cliques */
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
     }
 
     nav ul li {
-        margin-bottom: 15px; /* Mais espaço entre os itens do menu */
+        margin-bottom: 15px;
         width: 100%;
         text-align: right;
     }
@@ -282,31 +407,31 @@ main {
     }
 
     nav a {
-        padding: 8px 0; /* Padding para as opções de menu */
-        display: block; /* Ocupa a largura total do li */
+        padding: 8px 0;
+        display: block;
     }
 
     .btn-login {
-        margin-top: 15px; /* Mais espaço acima do botão de login */
+        margin-top: 15px;
         width: 100%;
         text-align: center;
-        padding: 12px 20px; /* Ajuste o padding do botão */
+        padding: 12px 20px;
     }
 
     /* Seção de Conteúdo */
     .imagem {
-        display: none; /* Esconde a imagem na versão mobile */
+        display: none;
     }
 
     .conteudo {
-        flex-direction: column; /* Itens em coluna */
+        flex-direction: column;
         align-items: flex-start;
         padding: 30px 20px;
     }
 
     .texto {
-        width: 100%; /* Ocupa toda a largura disponível */
-        text-align: center; /* Centraliza o texto */
+        width: 100%;
+        text-align: center;
     }
 
     .texto h1 {
@@ -320,52 +445,49 @@ main {
     }
 
     .texto button {
-        width: 80%; /* Botão com largura reduzida, centralizado */
-        margin: 0 auto; /* Centraliza o botão */
+        width: 80%;
+        margin: 0 auto;
         display: block;
     }
 
     /* Carrossel de Serviços (ATIVADO AQUI) */
     .servicos .container {
-        padding: 0; /* Remove padding lateral do container para usar o do wrapper */
+        padding: 0;
     }
 
     .servicos-carrossel-wrapper {
-        overflow-x: scroll; /* Permite a rolagem horizontal */
-        scroll-behavior: smooth; /* Rolagem suave (para scroll manual ou JS) */
-        -webkit-overflow-scrolling: touch; /* Melhora a rolagem em iOS */
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
         width: 100%;
-        margin: 0; /* Remove margin auto */
-        padding: 0 20px; /* Adiciona padding lateral para os cards não colarem nas bordas */
-        box-sizing: border-box; /* Garante que o padding não adicione largura extra */
+        margin: 0;
+        padding: 0 20px;
+        box-sizing: border-box;
     }
 
     .servicos-grid {
-        display: flex; /* Muda para flexbox para permitir o scroll horizontal */
-        flex-wrap: nowrap; /* Impede que os itens quebrem linha */
-        gap: 20px; /* Espaçamento entre os cards no carrossel */
-        width: max-content; /* FAZ O CONTAINER TER A LARGURA DE TODOS OS ITENS */
-        /* Removido grid-template-columns e max-width que são para desktop */
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 20px;
+        width: max-content;
         grid-template-columns: unset;
         max-width: unset;
         margin: 0;
-        padding-bottom: 10px; /* Espaço para a barra de rolagem se ela aparecer */
+        padding-bottom: 10px;
     }
 
     .servicos .item {
-        flex: 0 0 auto; /* Impede que os itens encolham ou estiquem */
-        width: 75%; /* Largura de cada item no carrossel. Ajuste se um card só estiver visível demais. */
-        max-width: 280px; /* Limita a largura máxima do item */
-        scroll-snap-align: start; /* Ajuda a "parar" nos itens ao rolar manualmente */
+        flex: 0 0 auto;
+        width: 75%;
+        max-width: 280px;
+        scroll-snap-align: start;
         background-color: white;
         padding: 25px 20px;
         border-radius: 8px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         text-align: center;
-        /* Remover transform e box-shadow do hover para mobile, se não quiser */
         transform: none;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        transition: none; /* Desativa a transição de hover para mobile */
+        transition: none;
     }
 
     .servicos .item img {
@@ -379,11 +501,56 @@ main {
 
     /* Opcional: Para esconder a barra de rolagem (mas manter a funcionalidade de scroll) */
     .servicos-carrossel-wrapper::-webkit-scrollbar {
-        display: none; /* Chrome, Safari, Opera */
+        display: none;
     }
     .servicos-carrossel-wrapper {
-        -ms-overflow-style: none;  /* Internet Explorer e Edge */
-        scrollbar-width: none;  /* Firefox */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    /* Responsividade para a NOVA SEÇÃO (site-creation-showcase) */
+    .site-creation-showcase {
+        padding: 60px 20px;
+    }
+
+    .site-creation-showcase h2 {
+        font-size: 2.2em;
+        margin-bottom: 8px;
+    }
+
+    .site-creation-showcase .sub-heading {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    .site-types-grid {
+        gap: 10px; /* Mais compacto em mobile */
+        justify-content: center; /* Centraliza melhor */
+    }
+
+    .type-button {
+        width: 100px; /* Botões menores */
+        height: 85px;
+        font-size: 0.8em;
+        padding: 8px;
+    }
+
+    .type-button img {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 5px;
+    }
+
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 1em;
+        margin-bottom: 40px;
+    }
+
+    .showcase-image-wrapper {
+        max-width: 100%;
+        padding: 0 10px; /* Adiciona um pequeno padding nas laterais em mobile */
+        box-sizing: border-box;
     }
 }
 
@@ -406,7 +573,7 @@ main {
     }
 
     .texto button {
-        width: 90%; /* Botão um pouco mais largo para telas muito pequenas */
+        width: 90%;
     }
 
     .servicos h2 {
@@ -419,13 +586,13 @@ main {
     }
 
     .servicos .item {
-        width: 90%; /* Ajusta a largura do item para celulares muito pequenos */
+        width: 90%;
         max-width: 250px;
-        padding: 20px 15px; /* Reduz o padding do card */
+        padding: 20px 15px;
     }
 
     .servicos .item img {
-        width: 60px; /* Reduz o tamanho do ícone */
+        width: 60px;
         margin-bottom: 8px;
     }
 
@@ -433,8 +600,41 @@ main {
         font-size: 14px;
     }
 
-    /* Ajuste de padding para o wrapper em telas muito pequenas */
     .servicos-carrossel-wrapper {
         padding: 0 15px;
+    }
+
+    /* Responsividade para a NOVA SEÇÃO (site-creation-showcase) em celulares pequenos */
+    .site-creation-showcase h2 {
+        font-size: 1.8em;
+    }
+
+    .site-creation-showcase .sub-heading {
+        font-size: 0.9em;
+        margin-bottom: 25px;
+    }
+
+    .site-types-grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Mais flexível */
+        gap: 8px;
+    }
+
+    .type-button {
+        width: 100%; /* Ocupa a largura total disponível */
+        max-width: 95px; /* Limita o tamanho máximo */
+        height: 80px;
+        font-size: 0.75em;
+        padding: 5px;
+    }
+
+    .type-button img {
+        width: 28px;
+        height: 28px;
+        margin-bottom: 5px;
+    }
+
+    .cta-button {
+        padding: 10px 25px;
+        font-size: 0.9em;
     }
 }
