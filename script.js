@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function calculateOriginalScrollWidth() {
         originalScrollWidth = 0;
         originalItems.forEach(item => {
-            originalScrollWidth += item.offsetWidth + 20;
+            originalScrollWidth += item.offsetWidth + 20; // 20px is the gap
         });
-        originalScrollWidth += 20;
+        originalScrollWidth += 20; // Add last gap
     }
 
     function startCarousel() {
@@ -44,11 +44,17 @@ document.addEventListener('DOMContentLoaded', () => {
         originalItems = Array.from(servicosGrid.children);
         originalItemsCount = originalItems.length;
 
+        // Clear existing clones if any
         while (servicosGrid.children.length > originalItemsCount) {
             servicosGrid.removeChild(servicosGrid.lastChild);
         }
 
+        // Clone items to create an infinite loop effect
         originalItems.forEach(item => {
+            const clone = item.cloneNode(true);
+            servicosGrid.appendChild(clone);
+        });
+        originalItems.forEach(item => { // Clone again for smoother transition back
             const clone = item.cloneNode(true);
             servicosGrid.appendChild(clone);
         });
@@ -58,8 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         scrollInterval = setInterval(() => {
             currentScroll += scrollSpeed;
-            if (currentScroll >= originalScrollWidth) {
-                currentScroll -= originalScrollWidth;
+            if (currentScroll >= servicosWrapper.scrollWidth / 2) { // Reset when halfway through cloned content
+                currentScroll -= (servicosWrapper.scrollWidth / 2);
             }
             servicosWrapper.scrollLeft = currentScroll;
         }, 20);
@@ -71,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollInterval = null;
             servicosWrapper.scrollLeft = 0;
 
+            // Remove cloned items
             originalItems = Array.from(servicosGrid.children).slice(0, originalItemsCount);
             while (servicosGrid.children.length > originalItems.length) {
                 servicosGrid.removeChild(servicosGrid.lastChild);
@@ -90,16 +97,13 @@ document.addEventListener('DOMContentLoaded', () => {
     mediaQueryMobile.addListener(handleCarouselLogic);
 
 
-    // --- LÓGICA PARA A TROCA DE IMAGEM NA NOVA SEÇÃO (site-creation-showcase) ---
+    // --- LÓGICA PARA A TROCA DE IMAGEM NA SEÇÃO "Liberdade para criar um site" ---
 
-    // A imagem que será alterada
     const siteShowcaseImage = document.getElementById('site-showcase-image');
-    // Todos os botões de seleção de tipo de site
     const typeButtons = document.querySelectorAll('.site-creation-showcase .type-button');
 
-    // Mapeamento de tipos de site para caminhos de imagem DENTRO DA PASTA 'images/showcase/'
-    const imageMap = {
-        'loja-online': 'images/showcase/loja-online.png', // Caminho da imagem de Loja Online
+    const imageMapSiteCreation = { // Renomeado para evitar conflito
+        'loja-online': 'images/showcase/loja-online.png',
         'servicos': 'images/showcase/servicos.png',
         'portfolio': 'images/showcase/portfolio.png',
         'blog': 'images/showcase/blog.png',
@@ -109,26 +113,67 @@ document.addEventListener('DOMContentLoaded', () => {
 
     typeButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove a classe 'active' de todos os botões e adiciona ao botão clicado
             typeButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
-            const type = button.dataset.type; // Pega o valor do atributo data-type
-            const newImageSrc = imageMap[type]; // Obtém o caminho da nova imagem
+            const type = button.dataset.type;
+            const newImageSrc = imageMapSiteCreation[type];
 
             if (newImageSrc) {
-                siteShowcaseImage.src = newImageSrc; // Altera a imagem
-                siteShowcaseImage.alt = `Exemplo de site tipo ${type.replace('-', ' ')}`; // Atualiza o alt
+                siteShowcaseImage.src = newImageSrc;
+                siteShowcaseImage.alt = `Exemplo de site tipo ${type.replace('-', ' ')}`;
             } else {
                 console.warn(`Imagem não encontrada para o tipo: ${type}`);
             }
         });
     });
 
-    // Garante que a imagem inicial seja a da 'loja-online' ao carregar a página
-    // (A menos que já esteja definida no HTML)
-    if (siteShowcaseImage && siteShowcaseImage.src.endsWith('loja-online.jpg') === false && imageMap['loja-online']) {
-         siteShowcaseImage.src = imageMap['loja-online'];
-         siteShowcaseImage.alt = "Exemplo de Loja Online";
+    if (siteShowcaseImage && !siteShowcaseImage.src.includes('loja-online.png') && imageMapSiteCreation['loja-online']) {
+        siteShowcaseImage.src = imageMapSiteCreation['loja-online'];
+        siteShowcaseImage.alt = "Exemplo de Loja Online";
+    }
+
+    // --- LÓGICA PARA A NOVA SEÇÃO "Visão Geral" ---
+
+    const visaogeralOptionItems = document.querySelectorAll('.visao-geral .option-item');
+    const visaogeralImages = document.querySelectorAll('.image-display .visao-geral-image');
+
+    // Mapeamento direto do data-content do item de opção para o data-image da imagem
+    const visaogeralImageMap = {
+        'tudo-em-um': 'tudo-em-um',
+        'conecte-contas': 'conecte-contas',
+        'escreva-emails': 'escreva-emails',
+        'acesse-arquivos': 'acesse-arquivos'
+    };
+
+    visaogeralOptionItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // Remove 'active' de todos os itens de opção
+            visaogeralOptionItems.forEach(opt => opt.classList.remove('active'));
+            // Adiciona 'active' ao item clicado
+            item.classList.add('active');
+
+            const contentType = item.dataset.content;
+            const targetImageDataType = visaogeralImageMap[contentType];
+
+            // Esconde todas as imagens do Outlook
+            visaogeralImages.forEach(img => img.classList.remove('active'));
+
+            // Mostra a imagem correspondente
+            if (targetImageDataType) {
+                const targetImage = document.querySelector(`.visao-geral-image[data-image="${targetImageDataType}"]`);
+                if (targetImage) {
+                    targetImage.classList.add('active');
+                } else {
+                    console.warn(`Imagem com data-image="${targetImageDataType}" não encontrada.`);
+                }
+            }
+        });
+    });
+
+    // Inicializa a seção "Visão Geral" ativando o primeiro item e sua imagem
+    // Garante que "Tudo em um só lugar" e sua imagem estejam ativos ao carregar
+    if (visaogeralOptionItems.length > 0) {
+        visaogeralOptionItems[0].click(); // Simula um clique no primeiro item para ativar
     }
 });

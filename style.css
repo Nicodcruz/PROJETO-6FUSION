@@ -352,6 +352,146 @@ main {
 }
 
 /* ======================================= */
+/* NOVA SEÇÃO: Visão Geral  */
+/* ======================================= */
+.visao-geral {
+    background-color: #F8F8F8; /* Um fundo muito claro para a seção */
+    padding: 80px 40px;
+    text-align: center;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.03); /* Sutil sombra interna */
+    width: 100%;
+    margin-top: 20px;
+}
+
+.visao-geral .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.visao-geral-header {
+    margin-bottom: 50px;
+}
+
+.visao-geral-header .section-label {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.visao-geral-header h2 {
+    font-size: 3em;
+    color: #1A1A1A;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Removido: .beneficios-tabs e .tab-button */
+
+.visao-geral-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha os itens ao topo do flex container */
+    gap: 60px;
+    text-align: left;
+    flex-wrap: wrap; /* Permite quebrar em várias linhas para responsividade */
+}
+
+.text-options {
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px; /* Limita a largura para melhor leitura */
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Espaçamento entre os blocos de texto */
+}
+
+.option-item {
+    background-color: white;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #F0F0F0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border-color: #D9F2F4;
+}
+
+.option-item.active {
+    background-color: #D9F2F4; /* Fundo ativado */
+    border-color: #00a4c6;
+    box-shadow: 0 6px 20px rgba(0, 124, 145, 0.1);
+    transform: translateY(-3px);
+}
+
+.option-item h3 {
+    font-size: 1.3em;
+    color: #007c91;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.option-item .option-description {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    opacity: 0;
+    padding-top: 0; /* Começa sem padding superior */
+}
+
+.option-item.active .option-description {
+    max-height: 150px; /* Altura suficiente para o texto */
+    opacity: 1;
+    padding-top: 15px; /* Adiciona padding superior quando ativo */
+}
+
+.option-item .option-description p {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.image-display {
+    flex: 2;
+    min-width: 400px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex; /* Flexbox para centralizar a imagem */
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f0f0f0;
+    position: relative; /* Para posicionar as imagens sobrepostas */
+    height: 550px; /* Altura fixa para o container de imagem */
+}
+
+/* Estilos para as imagens dentro de .image-display */
+.image-display .visao-geral-image {
+    position: absolute; /* Para sobrepor as imagens */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    opacity: 0; /* Inicia invisível */
+    transition: opacity 0.6s ease-in-out; /* Transição suave de opacidade */
+    border-radius: 12px; /* Garante cantos arredondados */
+}
+
+.image-display .visao-geral-image.active {
+    opacity: 1; /* Torna visível quando ativo */
+}
+
+
+/* ======================================= */
 /* MEDIA QUERIES PARA RESPONSIVIDADE */
 /* ======================================= */
 
@@ -552,6 +692,46 @@ main {
         padding: 0 10px; /* Adiciona um pequeno padding nas laterais em mobile */
         box-sizing: border-box;
     }
+
+    /* Responsividade para a NOVA SEÇÃO (visao-geral) */
+    .visao-geral {
+        padding: 50px 20px;
+    }
+
+    .visao-geral-header h2 {
+        font-size: 2.2em;
+        margin-bottom: 20px;
+    }
+
+    .visao-geral-content {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .text-options {
+        min-width: unset;
+        max-width: 100%;
+        gap: 15px; /* Menos espaçamento */
+    }
+
+    .option-item {
+        padding: 20px 25px;
+    }
+
+    .option-item h3 {
+        font-size: 1.2em;
+    }
+
+    .option-item .option-description p {
+        font-size: 0.85em;
+    }
+
+    .image-display {
+        min-width: unset;
+        max-width: 100%;
+        height: 350px; /* Altura reduzida em mobile */
+    }
 }
 
 /* Responsivo: Celular pequeno (aplicado abaixo de 480px) */
@@ -636,5 +816,24 @@ main {
     .cta-button {
         padding: 10px 25px;
         font-size: 0.9em;
+    }
+
+    /* Responsividade para a NOVA SEÇÃO (visao-geral) em celulares pequenos */
+    .visao-geral-header h2 {
+        font-size: 1.8em;
+    }
+
+    /* Removido: .beneficios-tabs .tab-button responsivos */
+
+    .option-item h3 {
+        font-size: 1.1em;
+    }
+
+    .option-item .option-description p {
+        font-size: 0.8em;
+    }
+
+    .image-display {
+        height: 280px; /* Altura ainda menor em celulares muito pequenos */
     }
 }
