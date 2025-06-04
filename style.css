@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: url(images/showcase/background.png);
+    background: #d5e6f6;
     color: #333;
 }
 
@@ -72,7 +72,7 @@ main {
     align-items: center;
     flex-direction: column;
     padding: 60px 40px;
-    background-color: #fdfdfd;
+    background-color: #ffffff;
     margin-top: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
@@ -142,10 +142,11 @@ main {
 /* Seção de Serviços */
 .servicos {
     padding: 60px 20px;
-    background-color: #D9F2F4;
+    background-color: #fcfcfc;
     text-align: center;
     width: 100%;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
 }
 
 .servicos .container {
@@ -229,10 +230,11 @@ main {
 /* NOVA SEÇÃO: Vitrine de Criação de Sites (site-creation-showcase) */
 .site-creation-showcase {
     padding: 10px 40px;
-    background-image: url(images/showcase/background.png); /* Fundo mais claro para destaque */
+    background: #d5e6f6; /* Fundo mais claro para destaque */
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 8px; /* Cantos levemente arredondados */
     width: 100%;
     margin-left: auto;
@@ -355,12 +357,13 @@ main {
 /* NOVA SEÇÃO: Visão Geral  */
 /* ======================================= */
 .visao-geral {
-    background-color: #F8F8F8; /* Um fundo muito claro para a seção */
+    background-color: #d5e6f6; /* Um fundo muito claro para a seção */
     padding: 80px 40px;
     text-align: center;
     box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.03); /* Sutil sombra interna */
     width: 100%;
     margin-top: 20px;
+    border-radius: 8px;
 }
 
 .visao-geral .container {
