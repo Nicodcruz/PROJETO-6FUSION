@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -84,6 +84,7 @@
       margin-bottom: 30px;
       font-weight: bold;
       color: #111827;
+      text-align: center;
     }
 
     form {
@@ -117,6 +118,19 @@
       color: red;
       text-align: center;
     }
+    
+    .link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.link a {
+  color: #10b981;
+  text-decoration: none;
+  font-weight: 500;
+}
+
   </style>
 </head>
 <body>
@@ -138,6 +152,10 @@
       {% if erro %}
         <p class="erro">{{ erro }}</p>
       {% endif %}
+
+       <div class="link">
+        Já tem uma conta? <a href="{{ url_for('login') }}">Entrar</a>
+      </div>
     </div>
   </div>
 </body>
