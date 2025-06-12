@@ -98,4 +98,4 @@ Estrutura organizada e modular, separando lógica de rotas e template.
 # 📞 Contato
 Linkedin: www.linkedin.com/in/nícolas-monteiro-7b31951b3
 
-GitHub: @Nicodcruz
+E-mail: nicolas.nick.2003@gmail.com
