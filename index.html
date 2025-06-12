@@ -22,9 +22,8 @@
             <nav>
                 <ul class="nav-menu">
                     <li><a href="#">Início</a></li>
-                    <li><a href="#">Sobre Nós</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="#modelos">Modelos</a></li>
+                    <li><a href="#Visao">Visão geral</a></li>
                 </ul>
             </nav>
 
@@ -42,15 +41,15 @@
         <section class="conteudo">
             <div class="texto">
                 <h1>Soluções Digitais para o Seu Negócio</h1>
-                <p>Oferecemos criação de sites, segurança digital e outros serviços personalizados para empresas.</p>
-                <button onclick="saibaMais()">Saiba Mais</button>
+                <p>Oferecemos criação de sites, segurança digital e outros serviços personalizados para empresas. Faça seu  <span>cadastro</span> para saber mais.</p>
+                <button onclick="saibaMais()">Cadastre-se</button>
             </div>
             <div class="imagem">
                 <img src="imagem-exemplo.png" alt="Pessoa usando computador" />
             </div>
         </section>         
 
-        <section class="site-creation-showcase">
+        <section id ="modelos" class="site-creation-showcase">
             <div class="container">
                 <h2>Liberdade para criar um site</h2>
                 <p class="sub-heading">Que tipo de site você gostaria de criar?</p>
@@ -85,7 +84,9 @@
                     <img id="site-showcase-image" src="images/showcase/loja-online.png" alt="Exemplo de Loja Online">
                 </div>
             </div>
-            <button class="cta-button" onclick="saibaMaisTipos()">Comece já</button>
+            <p class="descricao">
+                    Crie, personalize e publique com apenas um clique.
+                </p>
         </section>
 
         <section class="servicos">
@@ -121,7 +122,7 @@
             </div>
         </section>
         
-        <section class="visao-geral">
+        <section id="Visao" class="visao-geral">
             <div class="container">
                 <div class="visao-geral-header">
                     <p class="section-label">VISÃO GERAL</p>
@@ -130,25 +131,26 @@
 
                 <div class="visao-geral-content">
                     <div class="text-options">
-                        <div class="option-item active" data-content="tudo-em-um">
-                            <h3>Resumo</h3>
-                            <div class="option-description">
-                                <p>O pontapé inicial deste projeto foi dado no ambiente acadêmico, com a proposta de mergulhar em novas tecnologias e transformar as habilidades da equipe em resultados práticos. </p>
-                            </div>
-                        </div>
-                        <div class="option-item" data-content="conecte-contas">
-                            <h3>Frameworks</h3>
-                            <div class="option-description">
-                                <p>Priorizando a eficácia na comunicação, optamos por ferramentas padrão e de simples manuseio.</p>
-                            </div>
-                        </div>
                         <div class="option-item" data-content="escreva-emails">
-                            <h3>Nossa equipe</h3>
+                            <h3>Quem somos</h3>
                             <div class="option-description">
                                 <p>Este projeto foi desenvolvido por um grupo de estudantes da Universidade Nove de Julho, com finalidade acadêmica. Ele pode servir como base para trabalhos e projetos futuros.
                                 </p>
                             </div>
                         </div>
+                        <div class="option-item active" data-content="tudo-em-um">
+                            <h3>Resumo</h3>
+                            <div class="option-description">
+                                <p>Oferecemos praticidade e inovação por meio da tecnologia, desenvolvendo sites e aplicativos que facilitam o dia a dia e transformam ideias em soluções digitais. </p>
+                            </div>
+                        </div>
+                        <div class="option-item" data-content="conecte-contas">
+                            <h3>Frameworks</h3>
+                            <div class="option-description">
+                                <p>Com foco na eficácia da comunicação, adotamos soluções simples e funcionais, que facilitam o processo e otimizam os resultados.</p>
+                            </div>
+                        </div>
+                        
                     </div>
 
                     <div class="image-display">
@@ -164,22 +166,20 @@
 
     <footer class="footer">
   <div class="social-icons">
-    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="https://github.com/Nicodcruz"><i class="fab fa-github"></i></a>
 
     <a href="#"><i class="fab fa-linkedin-in"></i></a>
   </div>
 
-  <nav class="footer-nav">
-    <a href="#">Início</a>
-    <a href="#">Serviços</a>
-    <a href="#">Sobre</a>
-    <a href="#">Login</a>
-
-  </nav>
 
   <p class="footer-copy">©2025  Fusion Six | Todos os direitos reservados</p>
 </footer>
-
+<a href="https://wa.me/5511946745685?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços." 
+       class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 .5C7.437.5.5 7.437.5 16c0 3.024.833 5.827 2.274 8.245L.5 31.5l7.48-2.245A15.426 15.426 0 0016 31.5c8.563 0 15.5-6.937 15.5-15.5S24.563.5 16 .5zm0 28.227a12.63 12.63 0 01-6.476-1.787l-.463-.276-4.427 1.329 1.37-4.317-.3-.492A12.66 12.66 0 013.773 16C3.773 8.854 9.854 2.773 17 2.773S30.227 8.854 30.227 16 24.146 28.727 16 28.727zm6.068-9.668c-.332-.166-1.963-.969-2.27-1.078-.307-.11-.53-.166-.752.166-.222.332-.861 1.078-1.056 1.3-.194.222-.389.25-.72.083-.332-.166-1.402-.516-2.671-1.646-.986-.88-1.651-1.968-1.845-2.3-.194-.332-.02-.511.146-.677.15-.15.332-.389.498-.583.166-.194.222-.332.332-.554.11-.222.055-.416-.027-.583-.083-.166-.752-1.814-1.03-2.482-.272-.654-.55-.565-.752-.565-.194 0-.416-.027-.638-.027s-.583.083-.861.389c-.278.305-1.057 1.033-1.057 2.52 0 1.488 1.083 2.927 1.234 3.127.15.194 2.13 3.24 5.163 4.544.722.311 1.284.498 1.722.637.722.23 1.378.198 1.9.12.58-.086 1.963-.8 2.24-1.57.277-.77.277-1.43.194-1.57-.083-.14-.305-.222-.637-.388z"/>
+        </svg>
+    </a>
 
     <script src="script.js"></script>
 </body>

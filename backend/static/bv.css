@@ -36,45 +36,8 @@ body {
    height: 80px;
 }
 
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-    align-items: center;
-}
-
-.nav-menu li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    font-size: 16px;
-    transition: color 0.3s ease;
-    position: relative;
-}
-
-.nav-menu li a:hover {
-    color: #1e90ff;
-}
-
-.nav-menu li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 50%;
-    background: #1e90ff;
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.nav-menu li a:hover::after {
-    width: 100%;
-}
-
 .logout-btn {
-    background: #1e90ff;
+    background: #00a4c6;
     color: white;
     border: none;
     padding: 12px 24px;
@@ -86,9 +49,8 @@ body {
 }
 
 .logout-btn:hover {
-    background: #0066cc;
+    background: #325662;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(30, 144, 255, 0.3);
 }
 
 /* Mobile Menu */
@@ -217,20 +179,20 @@ body {
 }
 
 .card button {
-    background: linear-gradient(135deg, #1e90ff, #0066cc);
+    background: #00a4c6;
     color: white;
     border: none;
-    padding: 12px 28px;
+    padding: 12px 24px;
     border-radius: 25px;
-    cursor: pointer;
     font-weight: 600;
+    cursor: pointer;
     transition: all 0.3s ease;
     font-size: 14px;
 }
 
 .card button:hover {
+    background: #325662;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(30, 144, 255, 0.3);
 }
 
 .pricing {
@@ -255,15 +217,20 @@ body {
 }
 
 .pricing-name {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+.categorias{
+    font-size: 13px;
+    color: #325662;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    flex-grow: 1;
     font-weight: 600;
-    color: #333;
 }
-
-.pricing-value {
-    font-weight: 700;
-    color: #1e90ff;
-}
-
 /* WhatsApp Float */
 .whatsapp-float {
     position: fixed;
@@ -376,18 +343,3 @@ body {
  color: #999;
 }
 
-.footer-nav {
- margin-bottom: 20px;
-}
-
-.footer-nav a {
- margin: 0 15px;
- color: white;
- text-decoration: none;
- font-weight: 500;
- transition: color 0.3s ease;
-}
-
-.footer-nav a:hover {
- color: #ccc;
-}
