@@ -17,56 +17,50 @@
 
 ## 📥 Instalação e Execução
 
-### Pré-requisitos
-- Python 3.8 ou superior  
-- MongoDB (local ou Atlas)  
-- pip  
-
-
-## 📥 Instalação e Execução
-
 ### ✅ Pré-requisitos
 
 - Python 3.8 ou superior  
 - MongoDB (instalado localmente ou via Atlas)  
 - pip instalado
 
-### 🚀 Passos
+## 🚀 Como Executar o Projeto
 
-# 1. Clone o repositório
+### 1. Clone o repositório
+
+```bash
 git clone https://github.com/Nicodcruz/PROJETO-6FUSION.git
 cd PROJETO-6FUSION
-
+```
 # 2. Crie e ative o ambiente virtual
+```
+# Linux/macOS
 python -m venv venv
-source venv/bin/activate       # Linux/macOS
-venv\Scripts\activate          # Windows
-
+source venv/bin/activate
+```
+```
+# Windows
+python -m venv venv
+venv\Scripts\activate
+```
 # 3. Instale as dependências
+```
 pip install -r requirements.txt
-
+```
 # 4. (Opcional) Configure variáveis de ambiente
+```
 export FLASK_APP=app.py
 export FLASK_ENV=development
 export MONGO_URI="mongodb://localhost:27017/6fusion"
-
+```
 # 5. Execute a aplicação
-flask run
-
-## 🌐 Estrutura de Páginas
-URL	Descrição
-/	Página inicial / dashboard
-/cadastro	Formulário para cadastrar novos dados
-/consulta	Lista dados salvos no banco
-/detalhes/<id>	Mostra detalhes de um registro específico
-
-Todas as páginas utilizam templates HTML com Jinja2 para renderização dinâmica a partir do Flask.
+```
+python app.py
+```
+---
 
 ## 📂 Estrutura do Projeto
-csharp
-Copiar
-Editar
-PROJETO-6FUSION/
+
+```PROJETO-6FUSION/
 ├── app.py                 # Aplicação Flask principal (rotas + lógica)
 ├── requirements.txt       # Dependências do projeto
 ├── static/                # Arquivos estáticos (CSS, imagens)
@@ -75,6 +69,7 @@ PROJETO-6FUSION/
     ├── cadastro.html
     ├── consulta.html
     └── detalhes.html
+```
 # 🗃️ Banco de Dados
 Armazenamento no MongoDB em uma coleção (ex: registros).
 
