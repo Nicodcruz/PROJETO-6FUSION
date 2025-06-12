@@ -96,6 +96,6 @@ Armazenamento seguro de credenciais MongoDB via variáveis de ambiente.
 Estrutura organizada e modular, separando lógica de rotas e template.
 
 # 📞 Contato
-Linkedin: www.linkedin.com/in/nícolas-monteiro-7b31951b3
+Linkedin: https://www.linkedin.com/in/n%C3%ADcolas-monteiro-cruz
 
 E-mail: nicolas.nick.2003@gmail.com
