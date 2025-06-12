@@ -95,19 +95,7 @@ Armazenamento seguro de credenciais MongoDB via variáveis de ambiente.
 
 Estrutura organizada e modular, separando lógica de rotas e template.
 
-# 📄 Licença
-Este projeto está sob a MIT License. Consulte o arquivo LICENSE para mais detalhes.
-
-# 🤝 Contribuição
-Faça um fork do projeto.
-
-Abra uma branch (feature/nova-funcionalidade).
-
-Adicione commits claros e informativos.
-
-Envie um Pull Request detalhando suas mudanças.
-
-📞 Contato
-Autor: Nico D. Cruz
+# 📞 Contato
+Linkedin: www.linkedin.com/in/nícolas-monteiro-7b31951b3
 
 GitHub: @Nicodcruz
